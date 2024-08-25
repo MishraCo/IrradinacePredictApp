@@ -1,6 +1,8 @@
 # Use an official Python runtime as a parent image
-FROM python:3.10-slim
+FROM python:3.12-slim
 #FROM public.ecr.aws/lambda/python:3.10
+
+RUN apt-get update && apt-get install -y python3-distutils python3-dev
 
 # Set the working directory in the container
 WORKDIR /src
